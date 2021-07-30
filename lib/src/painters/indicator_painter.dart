@@ -23,7 +23,7 @@ abstract class IndicatorPainter extends CustomPainter {
     this.offset,
     this.count,
     this._effect,
-  )   : assert(offset.ceil() < count, 'Current page is out of bounds'),
+  )   : assert(offset.ceil() < count + 1, 'Current page is out of bounds'),
         dotRadius = Radius.circular(_effect.radius),
         dotPaint = Paint()
           ..color = _effect.dotColor
